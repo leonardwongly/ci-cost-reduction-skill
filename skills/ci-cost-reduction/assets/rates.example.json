@@ -1,0 +1,52 @@
+{
+  "_note": "EXAMPLE RATES. Replace every per_minute with what this team actually pays (provider price page, plan discounts, included minutes, amortised self-hosted cost). Rules are tried in order: the first regex that matches the job's comma-joined runner labels wins. Unmatched jobs are reported as 'unpriced'.",
+  "currency": "USD",
+  "round_up_per_job": true,
+  "rates": [
+    {
+      "name": "self-hosted (amortised)",
+      "match": "self-hosted",
+      "per_minute": 0.0
+    },
+    {
+      "name": "linux-64core",
+      "match": "(ubuntu|linux).*(64[- ]?(core|cpu|vcpu)|[-_]64($|,))|(^|[-_])64vcpu",
+      "per_minute": 0.256
+    },
+    {
+      "name": "linux-32core",
+      "match": "(ubuntu|linux).*(32[- ]?(core|cpu|vcpu)|[-_]32($|,))|(^|[-_])32vcpu",
+      "per_minute": 0.128
+    },
+    {
+      "name": "linux-16core",
+      "match": "(ubuntu|linux).*(16[- ]?(core|cpu|vcpu)|[-_]16($|,))|(^|[-_])16vcpu",
+      "per_minute": 0.064
+    },
+    {
+      "name": "linux-8core",
+      "match": "(ubuntu|linux).*(8[- ]?(core|cpu|vcpu)|[-_]8($|,))|(^|[-_])8vcpu",
+      "per_minute": 0.032
+    },
+    {
+      "name": "linux-4core",
+      "match": "(ubuntu|linux).*(4[- ]?(core|cpu|vcpu)|[-_]4($|,))|(^|[-_])4vcpu",
+      "per_minute": 0.016
+    },
+    {
+      "name": "macos",
+      "match": "macos",
+      "per_minute": 0.08
+    },
+    {
+      "name": "windows",
+      "match": "windows",
+      "per_minute": 0.016
+    },
+    {
+      "name": "linux-2core (standard)",
+      "match": "ubuntu|linux",
+      "per_minute": 0.008
+    }
+  ]
+}

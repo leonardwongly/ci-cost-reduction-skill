@@ -73,3 +73,7 @@ tests/                           unit tests for the script and skill layout
 python3 -m unittest discover -s tests
 npx -y skills@1.9.0 add . --list      # confirm the CLI discovers the skill
 ```
+
+## License
+
+[MIT](LICENSE)
